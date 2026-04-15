@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.env
+model_artifacts/model.pkl
+model_artifacts/scaler.pkl
+model_artifacts/model_backup.pkl
+model_artifacts/model_200trees_backup.pkl
+flight_data_2024.csv
+.ipynb_checkpoints/
+figures/

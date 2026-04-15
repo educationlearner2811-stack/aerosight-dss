@@ -1,0 +1,15 @@
+{
+  "DepHour": 13.0,
+  "DayOfWeek": 4.0,
+  "Month": 7.0,
+  "Distance": 680.0,
+  "IsPeakHour": 0.0,
+  "IsWeekend": 0.0,
+  "AvgWeatherDelay_Route": 0.13,
+  "AvgNASDelay_Origin": 2.54,
+  "AvgLateAircraft_Airline": 5.25,
+  "AvgCarrierDelay_Airline": 4.46,
+  "Airline_enc": 9.0,
+  "Origin_enc": 182.0,
+  "Dest_enc": 182.0
+}

@@ -1,0 +1,15 @@
+{
+  "DepHour": 0.2491620997528097,
+  "DayOfWeek": 0.027706852317967583,
+  "Month": 0.15062264340424417,
+  "Distance": 0.05580581840296914,
+  "IsPeakHour": 0.012440421212324141,
+  "IsWeekend": 0.00656454541863634,
+  "AvgWeatherDelay_Route": 0.10223372696711615,
+  "AvgNASDelay_Origin": 0.16478207561366318,
+  "AvgLateAircraft_Airline": 0.08280949293792099,
+  "AvgCarrierDelay_Airline": 0.03158138940937557,
+  "Airline_enc": 0.03580604086809167,
+  "Origin_enc": 0.0406123304284782,
+  "Dest_enc": 0.039872563266403094
+}
