@@ -122,6 +122,20 @@ FEATURE_LABELS = {
 # ============================================================
 # LOADERS
 # ============================================================
+def download_model_if_missing():
+    import urllib.request
+    files = {
+        'model_artifacts/model.pkl': 'https://huggingface.co/spaces/Infinitefreame/aerosight-dss/resolve/main/model_artifacts/model.pkl',
+        'model_artifacts/scaler.pkl': 'https://huggingface.co/spaces/Infinitefreame/aerosight-dss/resolve/main/model_artifacts/scaler.pkl',
+    }
+    os.makedirs('model_artifacts', exist_ok=True)
+    for local_path, url in files.items():
+        if not os.path.exists(local_path):
+            st.info(f'Downloading {local_path}...')
+            urllib.request.urlretrieve(url, local_path)
+
+download_model_if_missing()
+
 @st.cache_resource
 def load_model_artifacts():
     model_path  = Path(ARTIFACTS_DIR) / 'model.pkl'
