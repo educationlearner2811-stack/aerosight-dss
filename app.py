@@ -938,6 +938,13 @@ with tab3:
 # ================================================================
 # TAB 4 — MODEL PERFORMANCE
 # ================================================================
+with tab4:
+    st.markdown('<p class="section-header">Model Evaluation & Justification</p>', unsafe_allow_html=True)
+    st.markdown("Explains model choices, performance metrics, and why the results are valid.")
+
+    perf_all  = metadata.get('performance', {})
+    best_name = metadata.get('model_name', 'Random Forest')
+
     if perf_all:
         st.markdown("#### All Models Compared")
         rows = []
