@@ -938,7 +938,7 @@ with tab3:
 # ================================================================
 # TAB 4 — MODEL PERFORMANCE
 # ================================================================
-if perf_all:
+    if perf_all:
         st.markdown("#### All Models Compared")
         rows = []
         for name, m in perf_all.items():
@@ -951,6 +951,10 @@ if perf_all:
                 'ROC AUC':  f"{m.get('roc_auc',0):.4f}",
             })
         st.dataframe(pd.DataFrame(rows).set_index('Model'), use_container_width=True)
+
+    st.divider()
+    st.markdown("#### Understanding the Metrics")
+    col_m1, col_m2 = st.columns(2)
 
     with col_m1:
         st.markdown("""
