@@ -938,14 +938,7 @@ with tab3:
 # ================================================================
 # TAB 4 — MODEL PERFORMANCE
 # ================================================================
-with tab4:
-    st.markdown('<p class="section-header">Model Evaluation & Justification</p>', unsafe_allow_html=True)
-    st.markdown("Explains model choices, performance metrics, and why the results are valid.")
-
-    perf_all  = metadata.get('performance', {})
-    best_name = metadata.get('model_name', 'Random Forest')
-
-    if perf_all:
+if perf_all:
         st.markdown("#### All Models Compared")
         rows = []
         for name, m in perf_all.items():
@@ -956,13 +949,8 @@ with tab4:
                 'Recall':   f"{m.get('recall',0)*100:.2f}%",
                 'F1 Score': f"{m.get('f1',0):.4f}",
                 'ROC AUC':  f"{m.get('roc_auc',0):.4f}",
-                'Selected': "✅ Best" if name == best_name else ""
             })
         st.dataframe(pd.DataFrame(rows).set_index('Model'), use_container_width=True)
-
-    st.divider()
-    st.markdown("#### Understanding the Metrics")
-    col_m1, col_m2 = st.columns(2)
 
     with col_m1:
         st.markdown("""
